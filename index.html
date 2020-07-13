@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARADIGMA</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="first-screen">
+        <div class="container">
+            <div class="first-screen-header">
+                <div class="row">
+                    <div class="col-10 col-sm-6 col-lg-2 col-md-3">
+                        <div class="first-screen-header-logo">
+                            <div class="first-screen-header-description">Студия депиляции и массажный кабинет в Бресте</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 offset-sm-1 col-lg-2 col-md-3 offset-md-1">
+                        <button class="first-screen-header-btn" onclick="show('.popup')"><img src="img/calendar-icon.png" alt=""> Записаться онлайн</button>
+                    </div>
+                    <div class="col-9 offset-3 col-sm-5 offset-sm-0 col-lg-3 col-md-4  offset-md-1 offset-lg-1 offset-xl-0">
+                        <div class="first-screen-header-location">
+                            <div class="first-screen-header-location-icon"></div>
+                            <div class="first-screen-header-location-text">
+                                Мы находимся в центре: <br>
+                                г. Брест, ул. Гоголя, д.65 <br>
+                                <p onmouseover="show('.first-screen-header-location-map')" onmouseout="hide('.first-screen-header-location-map')"> Смотреть на карте</p>
+                            </div>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A56d183a27dbc77c7cf7b3709a9c0ffdab2165d89a236b632cbf4e34779bcddca&amp;source=constructor" width="320" height="220" frameborder="0" class="first-screen-header-location-map"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-9 offset-3 col-sm-6 offset-sm-1 col-lg-3 col-md-4 offset-md-0 offset-lg-0 offset-xl-1">
+                        <div class="first-screen-header-contacts">
+                            <div class="first-screen-header-contacts-text"><img src="img/green-circle.png" alt=""> Звоните, мы сейчас работаем</div>
+                            <div class="first-screen-header-contacts-phone"><img src="img/phone-icon.png" alt="" class="phone-icon">+375 33 382 24 99</div>
+                            <div class="first-screen-header-contacts-time"><img src="img/time-icon.png" alt="" class="time-icon">Пн-Вс <b>9:00-21:00</b></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.first-screen-header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="first-screen-nav">
+                        <ul class="first-screen-nav-menu">
+                            <li><b>Главная</b></li>
+                            <li>Шугаринг и депиляция воском</li>
+                            <li>Классический массаж</li>
+                            <li>Обучение</li>
+                            <li>Косметика для мастеров</li>
+                            <li>Статьи</li>
+                            <li>О студии</li>
+                            <li>Контакты</li>
+                        </ul>
+                    </div>
+                    <div class="first-screen-nav-menu_toggled" id="first-screen-nav-menu_toggled" onclick="toggle_Menu()">Меню<div class="arrow"></div></div>
+                </div>
+            </div>
+            <!-- MENU-->
+            <div class="rellax" id="heart-rellax-2" data-rellax-speed="2"></div>
+            <div class="rellax" id="heart-rellax-1" data-rellax-speed="2"></div>
+            <!-- Parallax Elements -->
+            <div class="row">
+                <div class="col-md-9 col-lg-7 offset-xl-1 offset-lg-0">
+                    <h1 class="first-screen-heading">Хотите избавиться от
+                        <b>нежелательных волос</b> <br>
+                        или нужен сеанс
+                        <b>антицеллюлитного массажа?</b></h1>
+                </div>
+            </div>
+            <!-- Heading -->
+            <div class="row">
+                <div class="col-lg-6 offset-xl-1 offset-lg-0">
+                    <ul class="first-screen-service-menu">
+                        <li>Депиляция воском и Шугаринг</li>
+                        <li>Профессиональные сертифицированные мастера</li>
+                        <li>Работаем и с женщинами, и с мужчинами</li>
+                        <li>Результат уже после первой процедуры</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="first-screen-client-card">
+                        <div class="first-screen-client-card-icon" onmouseover="show('.first-screen-client-card-notice')" onmouseout="hide('.first-screen-client-card-notice')"><b>i</b></div>
+                        <div class="first-screen-client-card-notice">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minus beatae delectus expedita magni doloremque commodi eveniet ipsum veniam</div>
+                    </div>
+                    <script>
+                        function toggle_Menu(){
+                            $('.first-screen-nav').toggleClass('first-screen-nav__active');
+                            $(".arrow").toggleClass('arrow__active');
+                        }
+                        function show(show_class){
+                            $(show_class).show()
+                        }
+                        function hide(hide_class){
+                            $(hide_class).hide()
+                        }
+                    </script>
+                </div>
+            </div>
+            <!-- Service + Client Card -->
+            <div class="row">
+                <div class="col-lg-6 offset-lg-1 offset-lg-0">
+                    <button class="get-card-btn" onclick="show('.popup')">Получить карту <br> клиента бесплатно  </button>
+                    <img src="img/branch.png" alt="" width="300" height="60" class="get-card-btn-branch">
+                </div>
+                <div class="col-lg-1 offset-lg-1">
+                    <img src="img/arrow-down.png" class="arrow-down" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup">
+        <div class="popup-wrap"></div>
+        <div class="popup-form">
+            <div class="popup-exit" onclick="hide('.popup')">&#10060</div>
+            <form action="#">
+                <h2><b>Получите</b> программу обучения</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic ex ad reiciendis porro tempore inventore quidem dicta quaerat minima?</p>
+                <select name="" id="">
+                    <option value="" selected disabled>Повышение квалификации</option>
+                </select>
+                <input type="text" placeholder="Ваше Имя">
+                <input type="tel" placeholder="Ваш номер телефона">
+                <button class="popup-btn" onclick="show('.popup-accept');hide('.popup-form')">Получить программу <img src="img/popup-plant.png" alt=""></button>
+            </form>
+            <img src="img/popup-book.png" class="popup-book" alt="">
+        </div>
+        <div class="popup-accept">
+            <div class="popup-exit" onclick="hide('.popup')">	&#10060</div>
+            <img src="img/accept-check.png" alt="" class="popup-accept-check">
+            <p><b>Ваш заказ принят.</b></p> <br>
+            <p>Ожидайте звонка</p>
+            <img src="img/accept-leave.png" alt="" class="popup-accept-leave" width="40">
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/rellax.min.js"></script>
+<script>
+    var rellax = new Rellax('.rellax');
+</script>
+</body>
+</html>
